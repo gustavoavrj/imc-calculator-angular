@@ -1,27 +1,28 @@
 # ImcCalculatorAngular
+Calculadora de salud imc, asc, mcm, act, pi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
+## Requisitos
+Mostrar imc
+Mostrar mcm
+Mostar asc
+Mostrar act
 
-## Development server
+## Pruebas
+ Estatura: 168 cm, Peso: 50 kg = 17.7
+ Estatura: 170 cm, Peso: 89 kg = IMC: 30.8
+ Estatura: 155 cm, Peso: 55 kg = IMC: 22.9
+ Estatura: 185 cm, Peso: 93 kg = IMC: 27.2
+ Estatura: 1.68 metros, Edad: 18, Peso: 50 kg, Sexo: M = ASC: 1.6
+ Estatura: 1.70 metros, Edad: 22, Peso: 89 kg, Sexo: H = ASC: 2.0
+ Estatura: 1.55 metros, Edad: 21, Peso: 55 kg, Sexo: M = ASC:1.5
+ Estatura: 1.85 metros, Edad: 29, Peso: 93 kg, Sexo H = ASC:2.2
+ Estatura: 1.68 metros, Peso: 50 kg, Sexo: M = MSM:41.74
+ Estatura: 1.70 metros, Peso: 89 kg, Sexo: H = MSM:54.11
+ Estatura: 1.55 metros, Peso: 55 kg, Sexo: M = MSM:37.78
+ Estatura: 1.85 metros, Peso: 93 kg, Sexo H =MSM:61.56
+ Estatura: 1.68 metros, Edad: 18, Peso: 50 kg, Sexo: M = ACT: 28.19
+ Estatura: 1.70 metros, Edad: 22, Peso: 89 kg, Sexo: H = ACT: 38.02
+ Estatura: 1.55 metros, Edad: 21, Peso: 55 kg, Sexo: M = ACT: 28.04
+ Estatura: 1.85 metros, Edad: 29, Peso: 93 kg, Sexo H = ACT:40.61
+ 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
