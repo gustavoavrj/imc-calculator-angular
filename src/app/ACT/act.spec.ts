@@ -22,7 +22,7 @@ describe('act unit tests', () => {
         // Act
         result = act("man",89, 170, 22);
         // Assert
-        expect(result).toBe(38.02);
+        expect(result).toBe(48.61);
     })
     it('Estatura: 1.55 metros, Edad: 21, Peso: 55 kg, Sexo: M = ACT: 28.04', () => {
       // Pattern AAA (Arrange - Act - Assert)
@@ -46,7 +46,7 @@ describe('act unit tests', () => {
     result = act("man", 93, 185, 29);
 
     // Assert
-    expect(result).toBe(40.61);
+    expect(result).toBe(50.93);
   })
 
 })

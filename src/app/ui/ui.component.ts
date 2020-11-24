@@ -23,6 +23,7 @@ export class UiComponent implements OnInit {
   result_mcm;
   result_act;
   result_asc;
+  result_pi;
   isShown: boolean = false ;
   ngOnInit(): void {
   }
@@ -32,6 +33,7 @@ export class UiComponent implements OnInit {
     this.result_mcm = mcm(this.gender, this.weight, this.height);
     this.result_act = act(this.gender,this.weight,this.height, this.age);
     this.result_asc = asc(this.weight, this.height)
+    this.result_pi = Number((21.7 * Math.pow((this.height / 100), 2)).toFixed(2))
 
     if (this.result_imc < 16.0) {
       this.status_imc = "Delgadez severa";
