@@ -22,7 +22,7 @@ describe('mcm unit tests', () => {
         // Act
         result = mcm("man",89, 170);
         // Assert
-        expect(result).toBe(54.11);
+        expect(result).toBe(57.35);
     })
     it('Estatura: 1.55 metros, Peso: 55 kg, Sexo: M = MSM:37.78 ', () => {
       // Pattern AAA (Arrange - Act - Assert)
@@ -46,7 +46,7 @@ describe('mcm unit tests', () => {
     result = mcm("man", 93, 185);
 
     // Assert
-    expect(result).toBe(61.56);
+    expect(result).toBe(63.75);
   })
 
 })
