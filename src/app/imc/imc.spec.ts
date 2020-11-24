@@ -6,46 +6,46 @@ describe('imc unit tests', () => {
  
  
 
-    it(' Estatura: 1.68 metros, Edad: 18, Peso: 50 kg, Sexo: M = 17.7', () => {
+    it(' Estatura: 168 cm, Peso: 50 kg = 17.7', () => {
         // Pattern AAA (Arrange - Act - Assert)
 
         // Arrange
         let result = 0.0;
         
         // Act
-        result = imc(1.68, 50);
+        result = imc(168, 50);
 
         // Assert
         expect(result).toBe(17.72);
     })
-    it('Estatura: 1.70 metros, Edad: 22, Peso: 89 kg, Sexo: H = IMC: 30.8, Status: Obeso, Peso normal: 53.5 - 72', () => {
+    it('Estatura: 170 cm, Peso: 89 kg = IMC: 30.8', () => {
         // Arrange
         let result = 0;
         // Act
-        result = imc(1.70,89);
+        result = imc(170,89);
         // Assert
         expect(result).toBe(30.8);
     })
-    it('Estatura: 1.55 metros, Edad: 21, Peso: 55 kg, Sexo: M = IMC: 22.9, Status: Normal, Peso normal: 44.4 - 59.8 ', () => {
+    it('Estatura: 155 cm, Peso: 55 kg = IMC: 22.9', () => {
       // Pattern AAA (Arrange - Act - Assert)
 
       // Arrange
       let result = 0;
       
       // Act
-      result = imc(1.55,55);
+      result = imc(155,55);
 
       // Assert
       expect(result).toBe(22.89);
   })
-    it('Estatura: 1.85 metros, Edad: 29, Peso: 93 kg, Sexo H = IMC: 27.2, Status: Sobre peso, Peso normal: 25 - 29.9', () => {
+    it('Estatura: 185 cm, Peso: 93 kg = IMC: 27.2', () => {
     // Pattern AAA (Arrange - Act - Assert)
 
     // Arrange
     let result = 0;
     
     // Act
-    result = imc(1.85,93);
+    result = imc(185,93);
 
     // Assert
     expect(result).toBe(27.17);
