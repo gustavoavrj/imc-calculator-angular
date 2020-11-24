@@ -4,7 +4,7 @@ describe('mcm unit tests', () => {
   
 
  
-    it('Estatura: 1.68 metros, Edad: 18, Peso: 50 kg, Sexo: M = MSM:41.74', () => {
+    it('Estatura: 1.68 metros, Peso: 50 kg, Sexo: M = MSM:41.74', () => {
         // Pattern AAA (Arrange - Act - Assert)
 
         // Arrange
@@ -16,7 +16,7 @@ describe('mcm unit tests', () => {
         // Assert
         expect(result).toBe(41.74);
     })
-    it('Estatura: 1.70 metros, Edad: 22, Peso: 89 kg, Sexo: H = MSM:54.11', () => {
+    it('Estatura: 1.70 metros, Peso: 89 kg, Sexo: H = MSM:54.11', () => {
         // Arrange
         let result = 0;
         // Act
@@ -24,7 +24,7 @@ describe('mcm unit tests', () => {
         // Assert
         expect(result).toBe(54.11);
     })
-    it('Estatura: 1.55 metros, Edad: 21, Peso: 55 kg, Sexo: M = MSM:37.78 ', () => {
+    it('Estatura: 1.55 metros, Peso: 55 kg, Sexo: M = MSM:37.78 ', () => {
       // Pattern AAA (Arrange - Act - Assert)
 
       // Arrange
@@ -36,7 +36,7 @@ describe('mcm unit tests', () => {
       // Assert
       expect(result).toBe(37.78);
   })
-    it('Estatura: 1.85 metros, Edad: 29, Peso: 93 kg, Sexo H =MSM:61.56', () => {
+    it('Estatura: 1.85 metros, Peso: 93 kg, Sexo H =MSM:61.56', () => {
     // Pattern AAA (Arrange - Act - Assert)
 
     // Arrange
