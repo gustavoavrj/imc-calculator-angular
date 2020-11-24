@@ -6,7 +6,7 @@ describe('imc unit tests', () => {
  
  
 
-    it(' Estatura: 168 cm, Peso: 50 kg = 17.7', () => {
+    it(' Estatura: 168 cm, Peso: 50 kg, Sexo: M = 17.7', () => {
         // Pattern AAA (Arrange - Act - Assert)
 
         // Arrange
