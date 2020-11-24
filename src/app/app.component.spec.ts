@@ -26,10 +26,5 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('imc-calculator-angular');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('imc-calculator-angular app is running!');
-  });
+  
 });
