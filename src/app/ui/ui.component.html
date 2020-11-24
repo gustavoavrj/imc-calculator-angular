@@ -41,8 +41,100 @@
                     </button>
                 </div>
             </form>
-            <div *ngIf="isShown" class="row container-fluid"  id="divshow" ><label class="label-radio3" >IMC:</label><span class="result">{{ result }}</span></div>
-            
+            <div *ngIf="isShown" class="row container-fluid"  id="divshow" >
+                <span>Tabla IMC:</span>
+                <style type="text/css">
+                    .tg  {border-collapse:collapse;border-spacing:0;}
+                    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                      overflow:hidden;padding:10px 5px;word-break:normal;}
+                    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                    .tg .tg-0lax{text-align:left;vertical-align:top}
+                    </style>
+                    <table class="tg">
+                    <thead>
+                      <tr>
+                        <th class="tg-0lax"><span style="font-weight:700;font-style:normal">Categoría</span></th>
+                        <th class="tg-0lax"><span style="font-weight:700;font-style:normal">IMC (kg/m²)</span></th>
+                        <th class="tg-0lax"><span style="font-weight:700;font-style:normal">Peso corporal</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tg-0lax">Delgadez severa</td>
+                        <td class="tg-0lax">&lt;16,0</td>
+                        <td class="tg-0lax">Bajo peso</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0lax">Delgadez moderada</td>
+                        <td class="tg-0lax">16,0 - 17,0</td>
+                        <td class="tg-0lax">Bajo peso</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0lax">Delgadez leve</td>
+                        <td class="tg-0lax">17,0 - 18,5</td>
+                        <td class="tg-0lax">Bajo peso</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0lax">Peso normal</td>
+                        <td class="tg-0lax">18,5 - 24,9</td>
+                        <td class="tg-0lax">Peso normal</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0lax">Pre-obeso</td>
+                        <td class="tg-0lax">25,0 - 29,9</td>
+                        <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Sobrepeso</span></td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0lax">Obesidad tipo I</td>
+                        <td class="tg-0lax">30,0 - 34,9</td>
+                        <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Obesidad</span></td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0lax">Obesidad tipo II</td>
+                        <td class="tg-0lax">35,0 - 39,9</td>
+                        <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Obesidad</span></td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0lax">Obesidad tipo III</td>
+                        <td class="tg-0lax">≥ 40</td>
+                        <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Obesidad</span></td>
+                      </tr>
+                    </tbody>
+                    </table>
+                    <br>
+                <span>Tus datos:  </span>
+                <table class="tg">
+                    <thead>
+                      <tr>
+                        <th class="tg-0pky"><span style="font-weight:700;font-style:normal">IMC:</span></th>
+                        <th class="tg-0pky">{{ result_imc }} Kg/m2</th>
+                        <th class="tg-0pky">{{ status_imc }}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tg-0pky"><span style="font-weight:700;font-style:normal">PI</span></td>
+                        <td class="tg-0pky">{{ result_pi }}  Kg</td>
+                        <td class="tg-0pky"></td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0pky"><span style="font-weight:700;font-style:normal">ASC</span></td>
+                        <td class="tg-0pky">{{ result_asc }} M2</td>
+                        <td class="tg-0pky"></td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0pky"><span style="font-weight:700;font-style:normal">MCM</span></td>
+                        <td class="tg-0pky">{{ result_mcm }} Kg</td>
+                        <td class="tg-0pky"></td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0pky"><span style="font-weight:700;font-style:normal">ACT</span></td>
+                        <td class="tg-0pky">{{ result_act }} litros</td>
+                        <td class="tg-0pky"></td>
+                      </tr>
+                    </tbody>
+                    </table>
         </div>
     </div>
 </div>
