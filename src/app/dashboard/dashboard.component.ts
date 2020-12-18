@@ -3,6 +3,8 @@ import { imc } from '../imc/imc'
 import { mcm } from '../mcm/mcm'
 import { act } from '../ACT/act'
 import { asc } from '../asc/asc'
+import { AuthenticationService } from '../_services'
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -12,7 +14,11 @@ import { asc } from '../asc/asc'
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private authenticationService: AuthenticationService,
+    private router: Router
+    ) { }
+  
   weight;
   height;
   age;
@@ -58,4 +64,12 @@ export class DashboardComponent implements OnInit {
 
 
   }
+
+  logout(){
+
+    this.authenticationService.logout();
+    console.log("logged out");
+    this.router.navigateByUrl('/dashboard');
+  }
+
 }

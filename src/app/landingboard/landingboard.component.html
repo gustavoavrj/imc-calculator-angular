@@ -9,14 +9,17 @@
             <p class="mb-5">Take your health to next step  
               <strong>Register</strong> or <strong>Login</strong> to start the change!</p>
             <div class="input-group input-group-newsletter">
-                <button class="btn btn-secondary" type="button" id="submit-button">Sign Up</button>
-                <button class="btn btn-secondary" type="button" id="submit-button">Sign In</button>
+              <div class="input-group-append">
+              <a [routerLink]="['../register']"><button class="btn btn-secondary" type="button" id="submit-button" routerLink="about/48 ">Sign Up</button></a>
+                <a [routerLink]="['../login']"><button class="btn btn-secondary" type="button" id="submit-button" >Sign In </button></a>
               </div>
+              
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
   <div class="social-icons">
     <ul class="list-unstyled text-center mb-0">
       <li class="list-unstyled-item">
@@ -36,4 +39,3 @@
       </li>
     </ul>
   </div>
-  
