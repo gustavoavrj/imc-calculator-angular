@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { UiComponent } from './ui/ui.component';
 import { FormsModule } from '@angular/forms';
 import { LandingboardComponent } from './landingboard/landingboard.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UiComponent,
-    LandingboardComponent
+    LandingboardComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
