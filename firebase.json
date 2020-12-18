@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "./dist/imc-calculator-angular",
+    "public": "./dist/imc-calculator-angular/",
     "ignore": [
       "firebase.json",
       "**/.*",
