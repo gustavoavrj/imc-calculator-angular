@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { UiComponent } from './ui/ui.component';
 import { FormsModule } from '@angular/forms';
 import { LandingboardComponent } from './landingboard/landingboard.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 
@@ -14,6 +15,7 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     UiComponent,
     LandingboardComponent,
+    DashboardComponent,
     RegisterComponent,
     LoginComponent
   ],
