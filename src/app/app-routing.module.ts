@@ -4,18 +4,19 @@ import { LandingboardComponent } from './landingboard/landingboard.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { AuthGuard } from './_helpers';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
-    { path: '', component: DashboardComponent, canActivate: [AuthGuard] },
-    { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent },
-    { path: 'landing', component: LandingboardComponent },
+  { path: '', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'landing', component: LandingboardComponent },
 
 
-    // otherwise redirect to home
-    { path: '**', redirectTo: 'landing' }
+  // otherwise redirect to home
+  { path: '**', redirectTo: 'landing' }
 ];
 @NgModule({
   imports: [
