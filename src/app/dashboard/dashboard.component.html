@@ -11,110 +11,112 @@
           <a class="nav-link" routerLink="">Dashboard</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" (click)="activeCalculate()">Calculate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="activeHistory()">History</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="activeGraph()">Chart</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" (click)="logout()">Logout</a>
         </li>
       </ul>
     </div>
   </nav>
-
+  <h1>Welcome </h1>
 <div class="container p-3 my-3 border bg-white">
-
+  
+<div *ngIf="isShownCalcular" id="showcalcular">
     <div class="wrap-contact3">
-        <form class="contact3-form validate-form" *ngIf="!isShown">
-            <span class="contact3-form-title">
+        <form class="contact3-form validate-form" >
+            <h5>
                 IMC Calculator
-            </span>
+            </h5>
 
             <div class="wrap-contact3-form-radio" >
-                <div class="contact3-form-radio m-r-42">
-                    <input class="input-radio3" [(ngModel)]="gender" id="man" type="radio" name="man" value="man">
-                    <label class="label-radio3" for="man">
+                <div class="form-check">
+                    <input class="form-check-input" [(ngModel)]="gender" id="man" type="radio" name="man" value="man">
+                    <label class="form-check-label" for="man">
                         Hombre
                     </label>
                 </div>
 
-                <div class="contact3-form-radio">
-                    <input class="input-radio3" [(ngModel)]="gender" id="woman" type="radio" name="woman" value="woman" >
-                    <label class="label-radio3" for="woman">
+                <div class="form-check">
+                    <input class="form-check-input" [(ngModel)]="gender" id="woman" type="radio" name="woman" value="woman" >
+                    <label class="form-check-label" for="woman">
                         Mujer
                     </label>
                 </div>
             </div>
-            <div class="wrap-input3 validate-input" data-validate = "Edad is require">
-                <input class="input3" [(ngModel)]="age" type="text" id="age" name="age" placeholder="Tu edad">
+            <div class="form-group" data-validate = "Edad is require">
+                <input class="form-control" [(ngModel)]="age" type="text" id="age" name="age" placeholder="Tu edad">
                 <span class="focus-input3"></span>
             </div>
 
-            <div class="wrap-input3 validate-input" data-validate="Estatura is required">
-                <input class="input3" [(ngModel)]="height" type="text" id="height" name="height" placeholder="Tu estatura (cm)">
+            <div class="form-group" data-validate="Estatura is required">
+                <input class="form-control" [(ngModel)]="height" type="text" id="height" name="height" placeholder="Tu estatura (cm)">
                 <span class="focus-input3"></span>
             </div>
 
-            <div class="wrap-input3 validate-input" data-validate = "Peso is require">
-                <input class="input3" [(ngModel)]="weight" type="text" id="weight" name="weight" placeholder="Tu Peso (kg)">
+            <div class="form-group" data-validate = "Peso is require">
+                <input class="form-control" [(ngModel)]="weight" type="text" id="weight" name="weight" placeholder="Tu Peso (kg)">
                 <span class="focus-input3"></span>
             </div>
             <div class="container-contact3-form-btn">
-                <button class="contact3-form-btn" (click)="calculate()">
+                <button class="btn btn-primary" (click)="calculate()">
                     Calcular
                 </button>
             </div>
         </form>
         <div *ngIf="isShown" class="row container-fluid"  id="divshow" >
             <span>Tabla IMC:</span>
-            <style type="text/css">
-                .tg  {border-collapse:collapse;border-spacing:0;}
-                .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-                  overflow:hidden;padding:10px 5px;word-break:normal;}
-                .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-                  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-                .tg .tg-0lax{text-align:left;vertical-align:top}
-                </style>
-                <table class="tg">
+                <table class="table">
                 <thead>
                   <tr>
-                    <th class="tg-0lax"><span style="font-weight:700;font-style:normal">Categoría</span></th>
-                    <th class="tg-0lax"><span style="font-weight:700;font-style:normal">IMC (kg/m²)</span></th>
-                    <th class="tg-0lax"><span style="font-weight:700;font-style:normal">Peso corporal</span></th>
+                    <th scope="col">Categoría</th>
+                    <th scope="col">IMC (kg/m²)</th>
+                    <th scope="col">Peso corporal</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr scope="row">
                     <td class="tg-0lax">Delgadez severa</td>
                     <td class="tg-0lax">&lt;16,0</td>
                     <td class="tg-0lax">Bajo peso</td>
                   </tr>
-                  <tr>
+                  <tr scope="row">
                     <td class="tg-0lax">Delgadez moderada</td>
                     <td class="tg-0lax">16,0 - 17,0</td>
                     <td class="tg-0lax">Bajo peso</td>
                   </tr>
-                  <tr>
+                  <tr scope="row">
                     <td class="tg-0lax">Delgadez leve</td>
                     <td class="tg-0lax">17,0 - 18,5</td>
                     <td class="tg-0lax">Bajo peso</td>
                   </tr>
-                  <tr>
+                  <tr scope="row">
                     <td class="tg-0lax">Peso normal</td>
                     <td class="tg-0lax">18,5 - 24,9</td>
                     <td class="tg-0lax">Peso normal</td>
                   </tr>
-                  <tr>
+                  <tr scope="row">
                     <td class="tg-0lax">Pre-obeso</td>
                     <td class="tg-0lax">25,0 - 29,9</td>
                     <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Sobrepeso</span></td>
                   </tr>
-                  <tr>
+                  <tr scope="row">
                     <td class="tg-0lax">Obesidad tipo I</td>
                     <td class="tg-0lax">30,0 - 34,9</td>
                     <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Obesidad</span></td>
                   </tr>
-                  <tr>
+                  <tr scope="row">
                     <td class="tg-0lax">Obesidad tipo II</td>
                     <td class="tg-0lax">35,0 - 39,9</td>
                     <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Obesidad</span></td>
                   </tr>
-                  <tr>
+                  <tr scope="row">
                     <td class="tg-0lax">Obesidad tipo III</td>
                     <td class="tg-0lax">≥ 40</td>
                     <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Obesidad</span></td>
@@ -123,31 +125,31 @@
                 </table>
                 <br>
             <span>Tus datos:  </span>
-            <table class="tg">
+            <table class="table">
                 <thead>
                   <tr>
-                    <th class="tg-0pky"><span style="font-weight:700;font-style:normal">IMC(Indice de Masa Corporal):</span></th>
-                    <th class="tg-0pky">{{ result_imc }} Kg/m2</th>
-                    <th class="tg-0pky">{{ status_imc }}</th>
+                    <th scope="col">IMC(Indice de Masa Corporal):</th>
+                    <th scope="col">{{ result_imc }} Kg/m2</th>
+                    <th scope="col">{{ status_imc }}</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr scope="row"> 
                     <td class="tg-0pky"><span style="font-weight:700;font-style:normal">PI(Peso Ideal):</span></td>
                     <td class="tg-0pky">{{ result_pi }}  Kg</td>
                     <td class="tg-0pky"></td>
                   </tr>
-                  <tr>
+                  <tr scope="row">
                     <td class="tg-0pky"><span style="font-weight:700;font-style:normal">ASC(Área de Superficie Corporal):</span></td>
                     <td class="tg-0pky">{{ result_asc }} M2</td>
                     <td class="tg-0pky"></td>
                   </tr>
-                  <tr>
+                  <tr scope="row">
                     <td class="tg-0pky"><span style="font-weight:700;font-style:normal">MCM(Masa Corporal Magra):</span></td>
                     <td class="tg-0pky">{{ result_mcm }} Kg</td>
                     <td class="tg-0pky"></td>
                   </tr>
-                  <tr>
+                  <tr scope="row">
                     <td class="tg-0pky"><span style="font-weight:700;font-style:normal">ACT(Agua Corporal Total):</span></td>
                     <td class="tg-0pky">{{ result_act }} L</td>
                     <td class="tg-0pky"></td>
@@ -158,5 +160,39 @@
 
 
 </div>
+</div>
 
+<div *ngIf="isShownHistory">
+  <h5>Historial</h5>
+      <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Fecha</th>
+          <th scope="col">IMC (kg/m²)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of imc_history" scope="row">
+          <td class="tg-0lax">{{item.date}}</td>
+          <td class="tg-0lax">{{item.imc}}</td>
+        </tr>
+        
+      </tbody>
+      </table>
+  </div>
+ <div *ngIf="isShownGraph" >
+  <div style="display: block; width: 100%; height:100%">
+    <canvas baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [colors]="barChartColors"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+      [plugins]="barChartPlugins">
+    </canvas>
+  </div>
+
+
+ </div>
 </div>

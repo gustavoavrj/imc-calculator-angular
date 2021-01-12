@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
-import { AuthenticationService } from '../_services'
+import { AuthenticationService } from '../auth.service'
 
 @Component({
   selector: 'app-register',
@@ -52,18 +52,9 @@ onSubmit() {
     if (this.registerForm.invalid) {
         return;
     }
+    this.authenticationService.register(this.f.name.value, this.f.username.value, this.f.password.value);
 
-    this.loading = true;
-    this.authenticationService.register(this.f.name.value, this.f.username.value, this.f.email.value, this.f.password.value)
-        .pipe(first())
-        .subscribe(
-            res => {
-                this.router.navigate([this.returnUrl]);
-            },
-            error => {
-                this.error = error;
-                this.loading = false;
-            });
+    
 }
 }
 

@@ -11,9 +11,9 @@ import { LandingboardComponent } from './landingboard/landingboard.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { ErrorInterceptor } from './_helpers';
-import { JwtInterceptor } from './_helpers';
-import { AuthGuard } from './_helpers';
+import { GraphQLModule } from './graphql.module';
+import { AuthGuard } from './auth.guard';
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -30,13 +30,13 @@ import { AuthGuard } from './_helpers';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    GraphQLModule,
+    ChartsModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    AuthGuard
+    AuthGuard,  
 ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, RegisterComponent, LoginComponent, DashboardComponent]
 })
 export class AppModule { }
